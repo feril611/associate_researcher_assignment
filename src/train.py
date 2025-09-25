@@ -18,7 +18,7 @@ MODEL_NAME = "distilbert-base-uncased"
 MAX_LEN = 128
 BATCH_TRAIN = 8
 BATCH_VAL = 4
-LR = 1e-4           # safer learning rate
+LR = 2e-3
 WEIGHT_DECAY = 0.01
 EPOCHS = 2
 N_SPLITS = 5
@@ -142,9 +142,6 @@ def main():
         cm = confusion_matrix(val["y_true"], val["y_pred"], labels=[0,1])
         print(f"[Fold {fold}] Confusion Matrix:\n{cm}")
 
-    print("\n===== CV Summary =====")
-    print("Acc per fold:", np.round(fold_acc, 3), "Mean:", np.mean(fold_acc).round(3))
-    print("F1 per fold:", np.round(fold_f1, 3), "Mean:", np.mean(fold_f1).round(3))
 
 if __name__ == "__main__":
     main()
