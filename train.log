@@ -1,0 +1,23 @@
+Using device: cpu
+Traceback (most recent call last):
+  File "/Users/ferialdelavari/associate_researcher_assignment/src/train.py", line 150, in <module>
+    main()
+  File "/Users/ferialdelavari/associate_researcher_assignment/src/train.py", line 81, in main
+    df = pd.read_csv(DATA_PATH, encoding="utf-8")[["text", "label"]].dropna()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ferialdelavari/associate_researcher_assignment/.venv/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ferialdelavari/associate_researcher_assignment/.venv/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ferialdelavari/associate_researcher_assignment/.venv/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ferialdelavari/associate_researcher_assignment/.venv/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/Users/ferialdelavari/associate_researcher_assignment/.venv/lib/python3.11/site-packages/pandas/io/common.py", line 882, in get_handle
+    handle = open(handle, ioargs.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../data/training-dataset.csv'
