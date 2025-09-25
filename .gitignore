@@ -3,3 +3,11 @@ __pycache__/
 *.pyc
 .DS_Store
 .ipynb_checkpoints/
+
+# Jupyter noise
+*.ipynb_checkpoints/
+# Generated images
+exports/
+*.png
+# OS
+.DS_Store
