@@ -13,7 +13,7 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import accuracy_score, f1_score, confusion_matrix
 
 
-DATA_PATH = Path("../data/training-dataset.csv")  # relative to src/
+DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "training-dataset.csv"  # relative to src/
 MODEL_NAME = "distilbert-base-uncased"
 MAX_LEN = 128
 BATCH_TRAIN = 8
