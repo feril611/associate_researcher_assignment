@@ -48,7 +48,24 @@ source .venv/bin/activate
 pip install -r requirements.txt
 python src/train.py
 ```
+---
+---
 
+## Jupyter Notebook
+
+To explore the training code interactively, you can open the notebook 
+included in this repo.
+
+```
+python3 -m venv .venv        
+source .venv/bin/activate    
+pip install -r requirements.txt
+pip install jupyter  
+
+
+jupyter notebook notebooks/Untitled.ipynb
+
+```
 ---
 
 ## Outputs
