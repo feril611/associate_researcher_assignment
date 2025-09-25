@@ -63,7 +63,7 @@ pip install -r requirements.txt
 pip install jupyter  
 
 
-jupyter notebook notebooks/Untitled.ipynb
+jupyter notebook notebooks/Model_Training.ipynb
 
 ```
 ---
